@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
 
+  <modelVersion>4.0.0</modelVersion>
   <groupId>com.zynick.commons</groupId>
   <artifactId>zynick</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -13,19 +13,26 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!--
   <dependencies>
+
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.5.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.3</version>
+    </dependency>
+
+    <!--<dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>3.8.1</version><scope>test</scope></dependency>-->
   </dependencies>
-  -->
 
   <build>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -35,6 +42,7 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -46,13 +54,14 @@
               <addClasspath>true</addClasspath>
             </manifest>
             <manifestEntries>
-              <!-- <mode>development</mode> -->
-              <!-- <url>${project.url}</url> -->
-              <!-- <Main-Class></Main-Class> -->
+              <!-- <mode>development</mode>-->
+              <!-- <url>${project.url}</url>-->
+              <!-- <Main-Class></Main-Class>-->
             </manifestEntries>
           </archive>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 
